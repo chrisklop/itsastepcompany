@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourcompany.com/sitemap.xml
+
+# Prevent indexing of private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+# Allow common assets
+Allow: /images/
+Allow: /icons/
+Allow: /fonts/

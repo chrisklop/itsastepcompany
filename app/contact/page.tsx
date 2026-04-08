@@ -31,7 +31,7 @@ export default function ContactPage() {
       icon: Phone,
       title: "Call Us",
       details: SITE_CONFIG.contact.phone,
-      description: "Caroline or Olivia will answer. Probably.",
+      description: "Karaline or Olyvia will answer. Probably.",
       action: `tel:${SITE_CONFIG.contact.phone}`,
       actionText: "Call Now"
     },
@@ -208,7 +208,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm">Real Humans</h4>
-                    <p className="text-sm text-gray-500">When you call, a real person answers. It&apos;s Caroline. Or Olivia. There is no phone tree. There is no hold music. There is just two EMTs and a dream.</p>
+                    <p className="text-sm text-gray-500">When you call, a real person answers. It&apos;s Karaline. Or Olyvia. There is no phone tree. There is no hold music. There is just two EMTs and a dream.</p>
                   </div>
                 </div>
               </div>

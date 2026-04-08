@@ -218,9 +218,9 @@ export const TESTIMONIALS = [
 export const TEAM_MEMBERS = [
   {
     id: 1,
-    name: "Caroline",
+    name: "Karaline",
     role: "Co-Founder & CEO",
-    bio: "EMT by day, ladder mogul by... also day. Caroline came up with the idea during a 12-hour shift and hasn't stopped talking about it since. Somehow convinced an entire friend group this is a real company.",
+    bio: "EMT by day, ladder mogul by... also day. Karaline came up with the idea during a 12-hour shift and hasn't stopped talking about it since. Somehow convinced an entire friend group this is a real company.",
     image: "",
     social: {
       linkedin: "https://linkedin.com"
@@ -228,9 +228,9 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 2,
-    name: "Olivia",
+    name: "Olyvia",
     role: "Co-Founder & COO",
-    bio: "Also an EMT. Also somehow running a ladder company. Handles the operational side, which mostly means agreeing with Caroline and telling coworkers to check the website.",
+    bio: "Also an EMT. Also somehow running a ladder company. Handles the operational side, which mostly means agreeing with Karaline and telling coworkers to check the website.",
     image: "",
     social: {
       linkedin: "https://linkedin.com"

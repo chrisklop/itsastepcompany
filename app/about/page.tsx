@@ -88,6 +88,24 @@ export default function AboutPage() {
         overlay={false}
       />
 
+      {/* Founders Photo Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="aspect-[16/9] md:aspect-[21/9] bg-gray-100 rounded-3xl overflow-hidden flex items-center justify-center border-2 border-dashed border-gray-200">
+              {/* Replace this div with: <img src="/images/founders.jpg" alt="Karaline and Olyvia, co-founders" className="w-full h-full object-cover" /> */}
+              <div className="text-center p-8">
+                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </div>
+                <p className="text-gray-400 font-medium text-sm">Founders Photo Coming Soon</p>
+                <p className="text-gray-300 text-xs mt-1">Karaline & Olyvia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Company Story Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
@@ -100,13 +118,13 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-500 leading-relaxed">
               <p>
-                In 2019, Caroline and Olivia — two emergency medical technicians — made an offhand
+                In 2019, Karaline and Olyvia — two emergency medical technicians — made an offhand
                 joke to coworkers about running a ladder company. The coworkers didn&apos;t believe them.
                 That was their first mistake.
               </p>
               <p>
                 Rather than admit the joke, they doubled down. And then tripled down. They convinced
-                Caroline&apos;s dad to build a website. Business cards were discussed. An LLC was filed.
+                Karaline&apos;s dad to build a website. Business cards were discussed. An LLC was filed.
                 Ladder? I Hardly Knew Her was no longer theoretical. It was, technically, a real
                 woman-owned business.
               </p>
@@ -215,12 +233,27 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {TEAM_MEMBERS.map((member, index) => (
               <Card key={member.id} hover padding="lg" className="text-center">
-                <div className="relative w-20 h-20 mx-auto mb-4">
-                  <div className={`w-full h-full ${avatarColors[index % avatarColors.length]} rounded-full flex items-center justify-center`}>
-                    <span className="text-white font-bold text-xl">
-                      {getInitials(member.name)}
-                    </span>
-                  </div>
+                <div className="relative w-24 h-24 mx-auto mb-4">
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  ) : (index < 2) ? (
+                    /* Photo placeholder for Karaline & Olyvia */
+                    <div className="w-full h-full rounded-full bg-gray-100 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center">
+                      <svg className="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                      <span className="text-[9px] text-gray-300 mt-1">Photo TBD</span>
+                    </div>
+                  ) : (
+                    /* Initial avatars for Gary & Flex Seal Ladder */
+                    <div className={`w-full h-full ${avatarColors[index % avatarColors.length]} rounded-full flex items-center justify-center`}>
+                      <span className="text-white font-bold text-xl">
+                        {getInitials(member.name)}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">
                   {member.name}

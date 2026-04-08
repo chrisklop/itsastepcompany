@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
-import Button from '@/components/common/Button';
 
 interface HeroProps {
   title: string;
@@ -23,6 +22,7 @@ interface HeroProps {
   backgroundVideo?: string;
   overlay?: boolean;
   centered?: boolean;
+  variant?: 'dark' | 'light';
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -35,6 +35,7 @@ const Hero: React.FC<HeroProps> = ({
   backgroundVideo,
   overlay = true,
   centered = true,
+  variant = 'light',
 }) => {
   const handleCTAClick = (cta: { href?: string; onClick?: () => void }) => {
     if (cta.onClick) {
@@ -44,8 +45,10 @@ const Hero: React.FC<HeroProps> = ({
     }
   };
 
+  const isLight = variant === 'light';
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className={`relative min-h-screen flex items-center justify-center overflow-hidden ${isLight ? 'bg-white' : ''}`}>
       {/* Background Media */}
       {backgroundVideo && (
         <video
@@ -58,7 +61,7 @@ const Hero: React.FC<HeroProps> = ({
           <source src={backgroundVideo} type="video/mp4" />
         </video>
       )}
-      
+
       {backgroundImage && !backgroundVideo && (
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
@@ -66,39 +69,45 @@ const Hero: React.FC<HeroProps> = ({
         />
       )}
 
-      {/* Default Gradient Background */}
-      {!backgroundImage && !backgroundVideo && (
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-600" />
+      {/* Default Background */}
+      {!backgroundImage && !backgroundVideo && !isLight && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
       )}
 
       {/* Overlay */}
-      {overlay && (
-        <div className="absolute inset-0 bg-black/40" />
+      {overlay && (backgroundImage || backgroundVideo) && (
+        <div className={`absolute inset-0 ${isLight ? 'bg-white/80' : 'bg-black/40'}`} />
       )}
 
       {/* Content */}
       <div className="relative z-10 w-full">
         <div className="container-custom">
-          <div className={`max-w-4xl ${centered ? 'mx-auto text-center' : ''}`}>
+          <div className={`max-w-5xl ${centered ? 'mx-auto text-center' : ''}`}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-sm font-semibold text-primary-300 tracking-wide uppercase mb-4">
+              <p className={`text-sm font-medium tracking-widest uppercase mb-6 ${
+                isLight ? 'text-accent-500' : 'text-gray-300'
+              }`}>
                 {subtitle}
-              </h2>
-              
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              </p>
+
+              <h1 className={`text-5xl md:text-7xl lg:text-9xl font-bold mb-8 leading-none tracking-apple-display ${
+                isLight ? 'text-gray-900' : 'text-white'
+              }`}>
                 {title}
               </h1>
-              
+
               {description && (
-                <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl mx-auto">
+                <p className={`text-xl md:text-2xl mb-10 leading-relaxed max-w-2xl mx-auto ${
+                  isLight ? 'text-gray-500' : 'text-gray-300'
+                }`}>
                   {description}
                 </p>
               )}
-              
+
               <div className={`flex flex-col sm:flex-row gap-4 ${centered ? 'justify-center' : ''}`}>
                 {primaryCTA && (
                   <motion.div
@@ -106,35 +115,37 @@ const Hero: React.FC<HeroProps> = ({
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                   >
-                    <Button
-                      size="lg"
-                      variant="primary"
-                      icon={ArrowRight}
-                      iconPosition="right"
+                    <button
                       onClick={() => handleCTAClick(primaryCTA)}
-                      className="bg-white text-primary-600 hover:bg-gray-100"
+                      className={`inline-flex items-center gap-2 px-8 py-4 text-lg font-medium rounded-full transition-all duration-200 ${
+                        isLight
+                          ? 'bg-gray-900 text-white hover:bg-black'
+                          : 'bg-white text-gray-900 hover:bg-gray-100'
+                      }`}
                     >
                       {primaryCTA.text}
-                    </Button>
+                      <ArrowRight className="w-5 h-5" />
+                    </button>
                   </motion.div>
                 )}
-                
+
                 {secondaryCTA && (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 }}
                   >
-                    <Button
-                      size="lg"
-                      variant="ghost"
-                      icon={Play}
-                      iconPosition="left"
+                    <button
                       onClick={() => handleCTAClick(secondaryCTA)}
-                      className="text-white border-white hover:bg-white hover:text-primary-600"
+                      className={`inline-flex items-center gap-2 px-8 py-4 text-lg font-medium rounded-full transition-all duration-200 border-2 ${
+                        isLight
+                          ? 'border-gray-300 text-gray-700 hover:border-gray-900 hover:text-gray-900'
+                          : 'border-white/30 text-white hover:border-white hover:bg-white/10'
+                      }`}
                     >
+                      <Play className="w-5 h-5" />
                       {secondaryCTA.text}
-                    </Button>
+                    </button>
                   </motion.div>
                 )}
               </div>
@@ -150,9 +161,13 @@ const Hero: React.FC<HeroProps> = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+        <div className={`w-6 h-10 border-2 rounded-full flex justify-center ${
+          isLight ? 'border-gray-300' : 'border-white/50'
+        }`}>
           <motion.div
-            className="w-1 h-3 bg-white rounded-full mt-2"
+            className={`w-1 h-3 rounded-full mt-2 ${
+              isLight ? 'bg-gray-400' : 'bg-white'
+            }`}
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />

@@ -6,12 +6,12 @@ import Services from '@/components/sections/Services';
 import Process from '@/components/sections/Process';
 import Testimonials from '@/components/sections/Testimonials';
 import CTA from '@/components/sections/CTA';
-import { 
-  SITE_CONFIG, 
-  FEATURES, 
-  SERVICES, 
-  PROCESS_STEPS, 
-  TESTIMONIALS 
+import {
+  SITE_CONFIG,
+  FEATURES,
+  PRODUCTS,
+  PROCESS_STEPS,
+  TESTIMONIALS
 } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -29,122 +29,107 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Excellence in Every Solution"
-        subtitle="Professional Services"
-        description="We deliver exceptional results through innovative solutions, expert guidance, and unwavering commitment to your success."
+        title="Step Up."
+        subtitle="Introducing the 2026 Lineup"
+        description="Handcrafted vertical mobility solutions for the modern climber. Starting at $13."
         primaryCTA={{
-          text: "Get Started Today",
-          href: "/contact"
+          text: "Explore the Collection",
+          href: "/products"
         }}
         secondaryCTA={{
-          text: "Watch Our Story",
+          text: "Watch the Film",
           href: "#about-preview"
         }}
-        backgroundImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2084&q=80"
+        variant="light"
+        overlay={false}
       />
 
       {/* Features Section */}
       <Features
-        title="Why Choose Us"
-        subtitle="The advantages that set us apart from the competition"
+        title="Why It's A Step Company"
+        subtitle="Three pillars of vertical excellence"
         features={FEATURES}
         columns={3}
+        variant="minimal"
       />
 
       {/* About Preview Section */}
       <section id="about-preview" className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Building Success Since {new Date().getFullYear() - SITE_CONFIG.stats.yearsInBusiness}
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over {SITE_CONFIG.stats.yearsInBusiness} years of experience, we've helped {SITE_CONFIG.stats.clientsServed}+ companies achieve their goals through innovative solutions and strategic thinking.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-primary-500 rounded-full mr-4"></div>
-                  <span className="text-gray-700">Proven track record of success</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-primary-500 rounded-full mr-4"></div>
-                  <span className="text-gray-700">Expert team of professionals</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-primary-500 rounded-full mr-4"></div>
-                  <span className="text-gray-700">Customized solutions for every client</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-primary-500 rounded-full mr-4"></div>
-                  <span className="text-gray-700">24/7 support and maintenance</span>
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-medium tracking-widest uppercase text-accent-500 mb-6">
+              Our Story
+            </p>
+            <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-8 tracking-apple-tight">
+              Defying Gravity Since 2019
+            </h2>
+            <p className="text-xl text-gray-500 leading-relaxed mb-12 max-w-3xl mx-auto">
+              What started as a conversation between a father and daughter has become the nation&apos;s most
+              improbable ladder company. With over 0 OSHA violations on record (because we&apos;ve never been
+              inspected), we&apos;ve served customers across all 50 states and several countries we&apos;re not
+              legally allowed to name.
+            </p>
 
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">14k+</div>
+                <div className="text-sm text-gray-500">Ladders Discussed*</div>
+                <div className="text-xs text-gray-400 mt-1">*Not all were sold</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">0</div>
+                <div className="text-sm text-gray-500">OSHA Inspections</div>
+                <div className="text-xs text-gray-400 mt-1">They haven&apos;t found us</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-accent-500 mb-2">$13</div>
+                <div className="text-sm text-gray-500">Starting Price</div>
+                <div className="text-xs text-gray-400 mt-1">Tax-deductible</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">200ft</div>
+                <div className="text-sm text-gray-500">Max Height</div>
+                <div className="text-xs text-gray-400 mt-1">We won&apos;t ask why</div>
+              </div>
+            </div>
+
+            <div className="mt-12">
               <a
                 href="/about"
-                className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200"
+                className="inline-flex items-center text-sm font-medium text-accent-500 hover:text-accent-600 transition-colors duration-200"
               >
                 Learn More About Us
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-                  alt="Our team working together"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Stats Overlay */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-primary-600">
-                      {SITE_CONFIG.stats.clientsServed}+
-                    </div>
-                    <div className="text-sm text-gray-600">Happy Clients</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary-600">
-                      {SITE_CONFIG.stats.projectsCompleted}+
-                    </div>
-                    <div className="text-sm text-gray-600">Projects</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Products Section */}
       <Services
-        title="Our Services"
-        subtitle="Comprehensive solutions designed to drive your business forward"
-        services={SERVICES}
+        title="The Collection"
+        subtitle="Engineered to exceed your expectations. Not necessarily safety standards."
+        services={PRODUCTS}
         showFeatures={true}
         variant="grid"
       />
 
       {/* Process Section */}
       <Process
-        title="How We Work"
-        subtitle="Our proven process ensures exceptional results every time"
+        title="From Dream to Climb"
+        subtitle="Four simple steps to vertical freedom"
         steps={PROCESS_STEPS}
-        variant="timeline"
+        variant="cards"
       />
 
       {/* Testimonials Section */}
       <Testimonials
-        title="What Our Clients Say"
-        subtitle="Don't just take our word for it - hear from our satisfied clients"
+        title="Real Reviews From Real Climbers"
+        subtitle="We couldn't make these up. Actually, we could. But we didn't. Mostly."
         testimonials={TESTIMONIALS}
         variant="carousel"
         autoplay={true}
@@ -152,12 +137,12 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <CTA
-        title="Ready to Transform Your Business?"
-        subtitle="Let's Get Started"
-        description="Join hundreds of satisfied clients who have achieved remarkable results with our expert guidance and innovative solutions."
+        title="Ready to Ascend?"
+        subtitle="Your Journey Starts Here"
+        description="Join over 14,000 customers who chose vertical freedom. Your first consultation is free. Your first ladder is $13. Your first climb is on you."
         primaryCTA={{
-          text: "Start Your Project",
-          href: "/contact"
+          text: "Build Your Ladder",
+          href: "/build"
         }}
         secondaryCTA={{
           text: "Schedule a Consultation",

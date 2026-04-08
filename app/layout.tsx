@@ -5,7 +5,6 @@ import '@/styles/globals.css';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import ScrollToTop from '@/components/common/ScrollToTop';
-import CookieConsent from '@/components/common/CookieConsent';
 import { SITE_CONFIG } from '@/lib/constants';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -17,11 +16,14 @@ export const metadata: Metadata = {
   },
   description: SITE_CONFIG.description,
   keywords: [
-    'professional services',
-    'consulting',
-    'business solutions',
-    'digital transformation',
-    'expert team',
+    'ladders',
+    'custom ladders',
+    'vertical mobility solutions',
+    'flex seal ladder',
+    'affordable ladders',
+    '$13 ladders',
+    'ladder nonprofit',
+    'step company',
   ],
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
@@ -56,7 +58,7 @@ export const metadata: Metadata = {
     title: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     images: [SITE_CONFIG.ogImage],
-    creator: '@yourcompany',
+    creator: '@itsastepco',
   },
   robots: {
     index: true,
@@ -68,10 +70,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
   },
 };
 
@@ -88,23 +86,22 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0066CC" />
-        <meta name="msapplication-TileColor" content="#0066CC" />
+        <meta name="theme-color" content="#1d1d1f" />
+        <meta name="msapplication-TileColor" content="#1d1d1f" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <div className="flex flex-col min-h-screen">
           <Header />
-          
+
           <main className="flex-grow">
             {children}
           </main>
-          
+
           <Footer />
         </div>
 
         <ScrollToTop />
-        <CookieConsent />
       </body>
     </html>
   );

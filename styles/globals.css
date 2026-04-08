@@ -8,37 +8,44 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply text-gray-900 antialiased;
+    @apply text-gray-800 antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold leading-tight;
+    @apply font-semibold leading-tight tracking-apple;
+    color: #1d1d1f;
   }
-  
+
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-5xl md:text-7xl lg:text-8xl font-bold tracking-apple-display;
   }
-  
+
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-3xl md:text-5xl lg:text-6xl font-semibold tracking-apple-tight;
   }
-  
+
   h3 {
     @apply text-2xl md:text-3xl;
   }
-  
+
   h4 {
     @apply text-xl md:text-2xl;
   }
-  
+
   h5 {
     @apply text-lg md:text-xl;
   }
-  
+
   h6 {
     @apply text-base md:text-lg;
+  }
+
+  p {
+    color: #86868b;
   }
 }
 
@@ -46,49 +53,54 @@
   .container-custom {
     @apply max-w-8xl mx-auto px-5 md:px-10;
   }
-  
+
   .section-padding {
     @apply py-20 md:py-32;
   }
-  
+
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
-  
+
   .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center gap-2;
+    @apply bg-gray-900 hover:bg-black text-white font-medium py-3 px-8 rounded-full transition-all duration-200 inline-flex items-center gap-2;
   }
-  
+
   .btn-secondary {
-    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 inline-flex items-center gap-2;
+    @apply border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-medium py-3 px-8 rounded-full transition-all duration-200 inline-flex items-center gap-2;
   }
-  
+
   .btn-accent {
-    @apply bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center gap-2;
+    @apply bg-accent-500 hover:bg-accent-600 text-white font-medium py-3 px-8 rounded-full transition-all duration-200 inline-flex items-center gap-2;
   }
-  
+
   .gradient-bg {
-    @apply bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-600;
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900;
   }
-  
+
   .hero-gradient {
-    @apply bg-gradient-to-r from-primary-500/90 to-secondary-500/90;
+    @apply bg-gradient-to-b from-gray-50 to-white;
   }
-  
+
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent-500 to-accent-600 bg-clip-text text-transparent;
   }
-  
+
+  .text-apple-body {
+    color: #86868b;
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
-  
+
   .form-input {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+    @apply w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all duration-200 bg-gray-50;
   }
-  
+
   .form-textarea {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none;
+    @apply w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all duration-200 resize-none bg-gray-50;
   }
 }
 
@@ -96,7 +108,7 @@
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .text-shadow-lg {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -128,27 +140,27 @@
   animation: countUp 0.8s ease-out;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - minimal Apple style */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
+  background: #d2d2d7;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #86868b;
 }
 
 /* Focus styles for accessibility */
 .focus-visible:focus {
-  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  @apply outline-none ring-2 ring-gray-900 ring-offset-2;
 }
 
 /* Print styles */

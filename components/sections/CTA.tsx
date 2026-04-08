@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Button from '@/components/common/Button';
 
 interface CTAProps {
   title: string;
@@ -30,7 +29,6 @@ const CTA: React.FC<CTAProps> = ({
   primaryCTA,
   secondaryCTA,
   variant = 'default',
-  backgroundImage,
 }) => {
   const handleCTAClick = (cta: { href?: string; onClick?: () => void }) => {
     if (cta.onClick) {
@@ -40,9 +38,10 @@ const CTA: React.FC<CTAProps> = ({
     }
   };
 
-  const bgClass = variant === 'minimal' ? 'bg-gray-50' : 'bg-primary-600';
-  const textClass = variant === 'minimal' ? 'text-gray-900' : 'text-white';
-  const subtextClass = variant === 'minimal' ? 'text-gray-600' : 'text-white/90';
+  const isMinimal = variant === 'minimal';
+  const bgClass = isMinimal ? 'bg-gray-50' : 'bg-gray-900';
+  const textClass = isMinimal ? 'text-gray-900' : 'text-white';
+  const subtextClass = isMinimal ? 'text-gray-500' : 'text-gray-300';
 
   return (
     <section className={`section-padding relative overflow-hidden ${bgClass}`}>
@@ -55,46 +54,45 @@ const CTA: React.FC<CTAProps> = ({
           viewport={{ once: true }}
         >
           {subtitle && (
-            <p className={`text-sm font-semibold tracking-wide uppercase mb-4 ${variant === 'minimal' ? 'text-primary-600' : 'text-white/80'}`}>
+            <p className={`text-sm font-medium tracking-widest uppercase mb-4 ${isMinimal ? 'text-accent-500' : 'text-accent-500'}`}>
               {subtitle}
             </p>
           )}
 
-          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight ${textClass}`}>
+          <h2 className={`text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-apple-tight ${textClass}`}>
             {title}
           </h2>
 
           {description && (
-            <p className={`text-xl leading-relaxed mb-8 max-w-2xl mx-auto ${subtextClass}`}>
+            <p className={`text-xl leading-relaxed mb-10 max-w-2xl mx-auto ${subtextClass}`}>
               {description}
             </p>
           )}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              variant="primary"
-              icon={ArrowRight}
-              iconPosition="right"
+            <button
               onClick={() => handleCTAClick(primaryCTA)}
-              className={variant === 'minimal' ? '' : 'bg-white text-primary-600 hover:bg-gray-100'}
+              className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-medium rounded-full transition-all duration-200 ${
+                isMinimal
+                  ? 'bg-gray-900 text-white hover:bg-black'
+                  : 'bg-white text-gray-900 hover:bg-gray-100'
+              }`}
             >
               {primaryCTA.text}
-            </Button>
+              <ArrowRight className="w-5 h-5" />
+            </button>
 
             {secondaryCTA && (
-              <Button
-                size="lg"
-                variant="ghost"
+              <button
                 onClick={() => handleCTAClick(secondaryCTA)}
-                className={
-                  variant === 'minimal'
-                    ? 'text-gray-700 border-gray-300 hover:bg-gray-100'
-                    : 'text-white border-white hover:bg-white hover:text-primary-600'
-                }
+                className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-medium rounded-full transition-all duration-200 border-2 ${
+                  isMinimal
+                    ? 'border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900'
+                    : 'border-white/30 text-white hover:border-white hover:bg-white/10'
+                }`}
               >
                 {secondaryCTA.text}
-              </Button>
+              </button>
             )}
           </div>
         </motion.div>

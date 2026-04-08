@@ -1,337 +1,336 @@
 export const SITE_CONFIG = {
-  name: "Your Company Name",
-  description: "Professional services that drive results and exceed expectations",
-  tagline: "Excellence in Every Solution",
-  url: "https://yourcompany.com",
+  name: "It's A Step Company",
+  description: "Handcrafted vertical mobility solutions for the modern climber. Starting at $13.",
+  tagline: "Elevating Expectations. Literally.",
+  url: "https://itsastepcompany.vercel.app",
   ogImage: "/images/og-image.jpg",
-  
-  // Contact Information
+
   contact: {
-    email: "hello@yourcompany.com",
-    phone: "+1 (555) 123-4567",
+    email: "info@itsastepcompany.com",
+    phone: "+1 (555) 742-5337",
     address: {
-      street: "123 Business Street",
-      city: "City",
-      state: "State",
-      zip: "12345",
-      country: "Country"
+      street: "We work remotely",
+      city: "Somewhere",
+      state: "IN",
+      zip: "46802",
+      country: "United States"
     }
   },
-  
-  // Business Hours
+
   hours: {
-    monday: "9:00 AM - 6:00 PM",
-    tuesday: "9:00 AM - 6:00 PM",
-    wednesday: "9:00 AM - 6:00 PM",
-    thursday: "9:00 AM - 6:00 PM",
-    friday: "9:00 AM - 6:00 PM",
-    saturday: "10:00 AM - 4:00 PM",
-    sunday: "Closed"
+    monday: "Whenever Chris is awake",
+    tuesday: "Whenever Chris is awake",
+    wednesday: "Whenever Chris is awake",
+    thursday: "Whenever Chris is awake",
+    friday: "Whenever Chris is awake",
+    saturday: "Maybe",
+    sunday: "Unlikely but not impossible"
   },
-  
-  // Social Media Links
+
   social: {
-    facebook: "https://facebook.com/yourcompany",
-    twitter: "https://twitter.com/yourcompany",
-    linkedin: "https://linkedin.com/company/yourcompany",
-    instagram: "https://instagram.com/yourcompany",
-    youtube: "https://youtube.com/@yourcompany"
+    facebook: "https://facebook.com/itsastepcompany",
+    twitter: "https://twitter.com/itsastepco",
+    linkedin: "https://linkedin.com/company/itsastepcompany",
+    instagram: "https://instagram.com/itsastepcompany",
+    youtube: "https://youtube.com/@itsastepcompany"
   },
-  
-  // Company Statistics
+
   stats: {
-    yearsInBusiness: 15,
-    clientsServed: 500,
-    projectsCompleted: 1200,
-    teamMembers: 25
+    yearsInBusiness: 7,
+    clientsServed: 14000,
+    projectsCompleted: 14000,
+    teamMembers: 4
   }
 };
 
 export const NAVIGATION_ITEMS = [
   { name: "Home", href: "/", dropdown: false },
-  { name: "About", href: "/about", dropdown: false },
-  { 
-    name: "Services", 
-    href: "/services", 
+  {
+    name: "Products",
+    href: "/products",
     dropdown: true,
     items: [
-      { name: "Consulting", href: "/services#consulting" },
-      { name: "Development", href: "/services#development" },
-      { name: "Design", href: "/services#design" },
-      { name: "Support", href: "/services#support" }
+      { name: "Standard Collection", href: "/products#standard" },
+      { name: "Premium Collection", href: "/products#premium" },
+      { name: "The Flex Seal Ladder", href: "/flex-seal" },
+      { name: "Accessibility Line", href: "/products#accessibility" },
     ]
   },
-  { name: "Blog", href: "/blog", dropdown: false },
-  { name: "Careers", href: "/careers", dropdown: false },
+  { name: "Build Your Ladder", href: "/build", dropdown: false },
+  { name: "About", href: "/about", dropdown: false },
   { name: "Contact", href: "/contact", dropdown: false }
 ];
 
 export const FEATURES = [
   {
     id: 1,
-    title: "Expert Team",
-    description: "Our experienced professionals bring years of industry expertise to every project.",
-    icon: "Users"
+    title: "Any Material",
+    description: "Wood. Glass. Styrofoam. PVC. Flex Seal. If it exists, we'll make a ladder out of it. If it doesn't exist, we'll still try.",
+    icon: "Layers"
   },
   {
     id: 2,
-    title: "24/7 Support",
-    description: "Round-the-clock support ensures your business never stops moving forward.",
-    icon: "Clock"
+    title: "Any Height",
+    description: "From 2 feet to 200 feet. We don't ask questions. We don't judge. We just build. Our engineers have repeatedly asked us to stop at 40 feet. We said no.",
+    icon: "ArrowUp"
   },
   {
     id: 3,
-    title: "Proven Results",
-    description: "Track record of delivering successful outcomes for clients across industries.",
-    icon: "TrendingUp"
+    title: "$13",
+    description: "Every ladder starts at $13. How? We're a registered 501(c)(3) nonprofit. Your ladder is tax-deductible. You're welcome, America.",
+    icon: "DollarSign"
   }
 ];
 
-export const SERVICES = [
+export const PRODUCTS = [
   {
     id: 1,
-    title: "Strategic Consulting",
-    description: "Expert guidance to help your business make informed decisions and achieve growth.",
-    icon: "Lightbulb",
-    features: ["Business Analysis", "Market Research", "Strategic Planning", "ROI Optimization"]
+    title: "The Classic",
+    description: "Our flagship A-frame ladder. Available in wood, aluminum, and for reasons our lawyers have asked us not to discuss, glass.",
+    icon: "Home",
+    features: ["A-Frame Design", "6-200ft Heights", "Pick Your Rungs", "Comes With Hope"]
   },
   {
     id: 2,
-    title: "Digital Solutions",
-    description: "Custom software and digital platforms tailored to your specific business needs.",
-    icon: "Code",
-    features: ["Web Development", "Mobile Apps", "Cloud Solutions", "System Integration"]
+    title: "The Collapsible",
+    description: "Goes from 20 feet to 2 feet in seconds. Reassembly time varies. Personal record: 4 minutes. Average: 45 minutes.",
+    icon: "Minimize2",
+    features: ["Telescoping Design", "Portable", "Mostly Re-Expandable", "Carry Bag Included"]
   },
   {
     id: 3,
-    title: "Creative Design",
-    description: "Compelling visual design that communicates your brand message effectively.",
-    icon: "Palette",
-    features: ["Brand Identity", "UI/UX Design", "Marketing Materials", "Website Design"]
+    title: "The Flex Seal Ladder",
+    description: "Frame made of Flex Seal Tape. Rungs filled with Flex Seal Liquid. Sealed with Flex Seal Paste. Phil Swift has not endorsed this product. We have not asked.",
+    icon: "Droplets",
+    features: ["100% Flex Seal", "Waterproof (the ladder, not you)", "Surprisingly Rigid", "Smells Interesting"]
   },
   {
     id: 4,
-    title: "Project Management",
-    description: "End-to-end project management ensuring timely delivery and quality results.",
-    icon: "CheckCircle",
-    features: ["Timeline Management", "Resource Planning", "Quality Assurance", "Risk Management"]
+    title: "The IKEA",
+    description: "DIY ladder kit. 47 pieces. 2 Allen wrenches. 0 English instructions. You will have 3 screws left over. This is normal. Probably.",
+    icon: "Package",
+    features: ["Self-Assembly", "Swedish Engineering*", "Instruction Manual (Swedish)", "Extra Screws (Normal)"]
   },
   {
     id: 5,
-    title: "Data Analytics",
-    description: "Transform your data into actionable insights for better business decisions.",
-    icon: "BarChart3",
-    features: ["Data Visualization", "Performance Metrics", "Predictive Analysis", "Custom Reports"]
+    title: "The Wide Boy",
+    description: "4x6 lumber instead of 2x4. Twice the width. Twice the confidence. Built for every body, because ladders should be inclusive.",
+    icon: "Accessibility",
+    features: ["4x6 Construction", "500lb Capacity", "ADA Inspired*", "Extra Wide Rungs"]
   },
   {
     id: 6,
-    title: "Training & Support",
-    description: "Comprehensive training and ongoing support to maximize your investment.",
-    icon: "GraduationCap",
-    features: ["User Training", "Documentation", "Technical Support", "Best Practices"]
+    title: "The Penitent",
+    description: "Our tallest offering. 200 feet of pure ambition. Requires a building permit in most states. We will not help you get one.",
+    icon: "Mountain",
+    features: ["200ft Height", "Anchoring Kit Sold Separately", "Wind Advisory Card Included", "Liability Waiver Required"]
   }
 ];
+
+// Keep SERVICES as alias for backward compat with Services component
+export const SERVICES = PRODUCTS;
 
 export const PROCESS_STEPS = [
   {
     id: 1,
-    title: "Discovery",
-    description: "We start by understanding your unique needs, goals, and challenges.",
-    icon: "Search"
+    title: "Choose",
+    description: "Select your material, height, color, and rung count using our state-of-the-art configurator. Or call us. We'll answer. Probably.",
+    icon: "MousePointer"
   },
   {
     id: 2,
-    title: "Strategy",
-    description: "Develop a comprehensive plan tailored to your specific requirements.",
-    icon: "Target"
+    title: "Pay",
+    description: "It's $13. We accept all major credit cards, PayPal, Venmo, and 'interesting trades' on a case-by-case basis.",
+    icon: "CreditCard"
   },
   {
     id: 3,
-    title: "Implementation",
-    description: "Execute the plan with precision, keeping you informed every step of the way.",
-    icon: "Cog"
+    title: "Wait",
+    description: "Estimated delivery: 2-47 business days. We're working on it. The supply chain for styrofoam ladders is more complex than you'd think.",
+    icon: "Clock"
   },
   {
     id: 4,
-    title: "Results",
-    description: "Deliver measurable outcomes and provide ongoing support for continued success.",
-    icon: "Trophy"
+    title: "Climb",
+    description: "Ascend with the confidence of someone who paid $13 for a ladder. We believe in you. Our insurance company does not.",
+    icon: "ArrowUpCircle"
   }
 ];
 
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    company: "Tech Innovations Inc.",
-    role: "CEO",
-    content: "Working with this team transformed our business. Their expertise and dedication exceeded our expectations.",
-    rating: 5,
-    image: "/images/testimonials/sarah.jpg"
+    name: "Doug M.",
+    company: "Tallahassee, FL",
+    role: "Homeowner",
+    content: "I bought the 40-foot glass ladder as a joke. Turns out it actually holds my weight. My wife is less impressed. The neighbors can see everything. 4 stars because the glass fogs up in humidity.",
+    rating: 4,
+    image: ""
   },
   {
     id: 2,
-    name: "Michael Chen",
-    company: "Global Solutions LLC",
-    role: "CTO",
-    content: "Professional, reliable, and results-driven. They delivered exactly what we needed on time and within budget.",
+    name: "Carlos R.",
+    company: "El Paso, TX",
+    role: "Verified Buyer",
+    content: "La escalera de 30 pies fue perfecta para mi proyecto de paisajismo. Muy resistente. Mi vecino tambien quiere una. 5 estrellas.",
     rating: 5,
-    image: "/images/testimonials/michael.jpg"
+    image: ""
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    company: "Creative Agency",
-    role: "Creative Director",
-    content: "The quality of work and attention to detail is outstanding. Our clients love the results we've achieved together.",
+    name: "Linda K.",
+    company: "Portland, OR",
+    role: "DIY Enthusiast",
+    content: "I ordered the IKEA kit version. I now have a ladder, 3 leftover screws, and an existential crisis. The Swedish instructions were actually more helpful than I expected. I don't speak Swedish.",
     rating: 5,
-    image: "/images/testimonials/emily.jpg"
+    image: ""
+  },
+  {
+    id: 4,
+    name: "Steve",
+    company: "Undisclosed",
+    role: "Definitely Not A Burglar",
+    content: "Very lightweight. Very quiet. Perfect for my... bird watching hobby. I watch birds. At night. Through windows. Incredible value at $13.",
+    rating: 5,
+    image: ""
+  },
+  {
+    id: 5,
+    name: "Patricia W.",
+    company: "Sacramento, CA",
+    role: "Building Inspector",
+    content: "As a building inspector, I have a lot of questions about this company. As a customer, I have zero complaints. The Flex Seal ladder held up my entire Thanksgiving display. 5 stars, pending investigation.",
+    rating: 5,
+    image: ""
+  },
+  {
+    id: 6,
+    name: "Anonymous",
+    company: "(Redacted)",
+    role: "OSHA Employee",
+    content: "I am legally required to tell you I did not purchase this ladder in my capacity as a federal employee. That said, it's in my garage and I use it every weekend. Please do not audit this review.",
+    rating: 5,
+    image: ""
   }
 ];
 
 export const TEAM_MEMBERS = [
   {
     id: 1,
-    name: "John Smith",
-    role: "CEO & Founder",
-    bio: "With over 15 years of industry experience, John leads our team with vision and expertise.",
-    image: "/images/team/john.jpg",
+    name: "Chris",
+    role: "CEO & Co-Founder",
+    bio: "Over 20 years of experience in industries completely unrelated to ladders. His qualifications include: owning a ladder, and having filed the LLC paperwork.",
+    image: "",
     social: {
-      linkedin: "https://linkedin.com/in/johnsmith",
-      twitter: "https://twitter.com/johnsmith"
+      linkedin: "https://linkedin.com/in/chrisklopfenstein"
     }
   },
   {
     id: 2,
-    name: "Lisa Wang",
-    role: "Head of Strategy",
-    bio: "Lisa brings strategic thinking and analytical expertise to drive client success.",
-    image: "/images/team/lisa.jpg",
+    name: "Caroline",
+    role: "COO & Co-Founder",
+    bio: "The original visionary behind It's A Step Company. While Chris handles operations, she handles the more critical function of escalating the bit whenever someone doubts the company's existence. Her business card says COO.",
+    image: "",
     social: {
-      linkedin: "https://linkedin.com/in/lisawang"
+      linkedin: "https://linkedin.com"
     }
   },
   {
     id: 3,
-    name: "David Brown",
-    role: "Lead Developer",
-    bio: "David's technical expertise ensures our solutions are robust, scalable, and future-proof.",
-    image: "/images/team/david.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/davidbrown",
-      github: "https://github.com/davidbrown"
-    }
+    name: "Gary",
+    role: "Head of Engineering",
+    bio: "Gary doesn't exist. But if he did, he'd have 30 years of structural engineering experience and strong opinions about rung spacing. We reference Gary in meetings to sound more credible.",
+    image: "",
+    social: {}
   },
   {
     id: 4,
-    name: "Maria Garcia",
-    role: "Design Director",
-    bio: "Maria creates compelling visual experiences that engage and inspire audiences.",
-    image: "/images/team/maria.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/mariagarcia",
-      dribbble: "https://dribbble.com/mariagarcia"
-    }
-  }
-];
-
-export const BLOG_POSTS = [
-  {
-    id: 1,
-    title: "10 Strategies for Digital Transformation Success",
-    excerpt: "Learn the key strategies that leading companies use to successfully navigate digital transformation.",
-    author: "John Smith",
-    date: "2024-01-15",
-    category: "Strategy",
-    image: "/images/blog/digital-transformation.jpg",
-    readTime: "5 min read"
-  },
-  {
-    id: 2,
-    title: "The Future of Remote Work: Trends and Technologies",
-    excerpt: "Explore the technologies and trends shaping the future of remote work and distributed teams.",
-    author: "Lisa Wang",
-    date: "2024-01-10",
-    category: "Technology",
-    image: "/images/blog/remote-work.jpg",
-    readTime: "7 min read"
-  },
-  {
-    id: 3,
-    title: "User Experience Design Best Practices for 2024",
-    excerpt: "Discover the latest UX design trends and best practices for creating exceptional user experiences.",
-    author: "Maria Garcia",
-    date: "2024-01-05",
-    category: "Design",
-    image: "/images/blog/ux-design.jpg",
-    readTime: "6 min read"
-  }
-];
-
-export const JOB_OPENINGS = [
-  {
-    id: 1,
-    title: "Senior Software Developer",
-    department: "Engineering",
-    location: "Remote",
-    type: "Full-time",
-    description: "Join our development team to build innovative solutions for our clients.",
-    requirements: [
-      "5+ years of software development experience",
-      "Proficiency in modern web technologies",
-      "Strong problem-solving skills",
-      "Excellent communication abilities"
-    ]
-  },
-  {
-    id: 2,
-    title: "UX/UI Designer",
-    department: "Design",
-    location: "New York, NY",
-    type: "Full-time",
-    description: "Create exceptional user experiences that delight our clients and their customers.",
-    requirements: [
-      "3+ years of UX/UI design experience",
-      "Proficiency in design tools (Figma, Adobe Creative Suite)",
-      "Strong portfolio demonstrating design thinking",
-      "Understanding of user-centered design principles"
-    ]
-  },
-  {
-    id: 3,
-    title: "Project Manager",
-    department: "Operations",
-    location: "Remote",
-    type: "Full-time",
-    description: "Lead cross-functional teams to deliver successful projects on time and within budget.",
-    requirements: [
-      "PMP certification preferred",
-      "3+ years of project management experience",
-      "Strong organizational and leadership skills",
-      "Experience with agile methodologies"
-    ]
+    name: "The Flex Seal Ladder",
+    role: "Chief Product Officer",
+    bio: "Technically a product, not a person. But it's our most autonomous team member. It doesn't take PTO. It doesn't complain. It just seals.",
+    image: "",
+    social: {}
   }
 ];
 
 export const FAQ_ITEMS = [
   {
     id: 1,
-    question: "What services do you offer?",
-    answer: "We offer a comprehensive range of services including strategic consulting, digital solutions, creative design, project management, data analytics, and training & support."
+    question: "Are these ladders OSHA compliant?",
+    answer: "We are proud to announce that we have no relationship with OSHA whatsoever. They have not inspected us, certified us, or acknowledged our existence. We consider this a feature."
   },
   {
     id: 2,
-    question: "How do you ensure project quality?",
-    answer: "We follow industry best practices, conduct regular quality reviews, and maintain open communication throughout the project lifecycle to ensure exceptional results."
+    question: "How is every ladder $13?",
+    answer: "We are a registered 501(c)(3) nonprofit organization. Our mission is to provide affordable vertical mobility solutions to all Americans. Your purchase is tax-deductible, and we are legally prohibited from making a profit. This arrangement works well for us because we weren't going to anyway."
   },
   {
     id: 3,
-    question: "What is your typical project timeline?",
-    answer: "Project timelines vary based on scope and complexity. We provide detailed timelines during the planning phase and keep you updated on progress throughout."
+    question: "Can I really get a 200-foot ladder?",
+    answer: "Yes. Should you? That is between you, your insurance provider, and God. We will build it. We will ship it. We will not ask why."
   },
   {
     id: 4,
-    question: "Do you offer ongoing support?",
-    answer: "Yes, we provide comprehensive post-launch support including maintenance, updates, training, and technical assistance to ensure your continued success."
+    question: "What is the Flex Seal Ladder made of?",
+    answer: "Flex Seal. The frame is Flex Seal Tape. The rungs are filled with Flex Seal Liquid. The joints are reinforced with Flex Seal Paste. It has not been tested by any regulatory body. It has been tested by us. Results were mixed but optimistic."
+  },
+  {
+    id: 5,
+    question: "Do you ship internationally?",
+    answer: "We have shipped ladders to 12 countries. We are legally allowed to discuss 9 of them."
+  },
+  {
+    id: 6,
+    question: "Can I visit your office?",
+    answer: "We work remotely. If you'd like to meet, we're happy to schedule a call. Chris will answer. He always answers. He has nothing else going on."
+  },
+  {
+    id: 7,
+    question: "Is this a real company?",
+    answer: "We are a registered LLC and 501(c)(3) nonprofit. We have a website. You are on it right now. What more do you want from us."
+  }
+];
+
+export const PRICING_TIERS = [
+  {
+    id: 1,
+    name: "The Ladder",
+    price: "$13",
+    description: "Our most popular option because it's our only option",
+    features: [
+      "Any material",
+      "Any height up to 20ft",
+      "Choice of color",
+      "Standard rungs",
+      "Free shipping (eventually)",
+    ]
+  },
+  {
+    id: 2,
+    name: "The Big Ladder",
+    price: "$13",
+    description: "Same price. We know. It doesn't make sense to us either.",
+    features: [
+      "Any material",
+      "Any height 20-100ft",
+      "Choice of color",
+      "Choice of rung material",
+      "Free shipping (patience required)",
+    ],
+    highlighted: true
+  },
+  {
+    id: 3,
+    name: "The Unreasonable Ladder",
+    price: "$13",
+    description: "Our accountant has asked us to stop offering this.",
+    features: [
+      "Any material including Flex Seal",
+      "Any height 100-200ft",
+      "Custom color matching",
+      "Premium rungs",
+      "\"Shipping\" (air quotes)",
+      "Liability waiver",
+    ]
   }
 ];

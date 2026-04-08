@@ -8,7 +8,7 @@ export const SITE_CONFIG = {
 
   contact: {
     email: "info@ladderiihardlyknewher.com",
-    phone: "+1 (555) 742-5337",
+    phone: "+1 (206) 635-7392",
     address: {
       street: "We work remotely",
       city: "Somewhere",

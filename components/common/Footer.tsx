@@ -176,6 +176,13 @@ const Footer: React.FC = () => {
               </span>
             </div>
           </div>
+          <div className="mt-4 text-center">
+            <p className="text-[10px] text-gray-300 leading-relaxed max-w-2xl mx-auto">
+              Ladder? I Hardly Knew Her is a parody/entertainment website. No actual ladders are manufactured, sold, or shipped.
+              This is not a real 501(c)(3) nonprofit organization. Not affiliated with Flex Seal, OSHA, IKEA, or Phil Swift.
+              For entertainment purposes only.
+            </p>
+          </div>
         </motion.div>
       </div>
     </footer>

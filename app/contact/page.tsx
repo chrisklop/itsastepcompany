@@ -31,7 +31,7 @@ export default function ContactPage() {
       icon: Phone,
       title: "Call Us",
       details: SITE_CONFIG.contact.phone,
-      description: "Chris will answer. He always answers.",
+      description: "Caroline or Olivia will answer. Probably.",
       action: `tel:${SITE_CONFIG.contact.phone}`,
       actionText: "Call Now"
     },
@@ -39,7 +39,7 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email Us",
       details: SITE_CONFIG.contact.email,
-      description: "Responses within 24 hours. Usually faster, because we're excited someone emailed.",
+      description: "Responses between shifts. Usually within 24 hours, because we're excited someone emailed.",
       action: `mailto:${SITE_CONFIG.contact.email}`,
       actionText: "Send Email"
     },
@@ -47,14 +47,14 @@ export default function ContactPage() {
       icon: MessageSquare,
       title: "Visit Us",
       details: "We don't have an office",
-      description: "We work out of Chris's garage. If you want to visit, bring snacks.",
+      description: "We're two EMTs. We don't have an office. If you want to meet, bring snacks to the ambulance bay.",
       action: "#contact-form",
       actionText: "Send Message"
     }
   ];
 
   const businessHours = [
-    { day: "Monday - Friday", hours: "Whenever Chris is awake" },
+    { day: "Monday - Friday", hours: "Between shifts" },
     { day: "Saturday", hours: "Maybe" },
     { day: "Sunday", hours: "Unlikely but not impossible" }
   ];
@@ -208,7 +208,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm">Real Humans</h4>
-                    <p className="text-sm text-gray-500">When you call, a real person answers. It&apos;s Chris. Or Caroline. There is no phone tree. There is no hold music. There is just us.</p>
+                    <p className="text-sm text-gray-500">When you call, a real person answers. It&apos;s Caroline. Or Olivia. There is no phone tree. There is no hold music. There is just two EMTs and a dream.</p>
                   </div>
                 </div>
               </div>

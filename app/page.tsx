@@ -64,8 +64,8 @@ export default function HomePage() {
               Defying Gravity Since 2019
             </h2>
             <p className="text-xl text-gray-500 leading-relaxed mb-12 max-w-3xl mx-auto">
-              What started as a conversation between a father and daughter has become the nation&apos;s most
-              improbable ladder company. With over 0 OSHA violations on record (because we&apos;ve never been
+              What started as a joke between two EMTs on a 12-hour shift has become the nation&apos;s most
+              improbable woman-owned ladder company. With over 0 OSHA violations on record (because we&apos;ve never been
               inspected), we&apos;ve served customers across all 50 states and several countries we&apos;re not
               legally allowed to name.
             </p>

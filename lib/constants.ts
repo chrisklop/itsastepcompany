@@ -1,12 +1,13 @@
 export const SITE_CONFIG = {
-  name: "It's A Step Company",
+  name: "Ladder? I Hardly Knew Her",
+  shortName: "LIHKH",
   description: "Handcrafted vertical mobility solutions for the modern climber. Starting at $13.",
   tagline: "Elevating Expectations. Literally.",
-  url: "https://itsastepcompany.vercel.app",
+  url: "https://ladderiihardlyknewher.vercel.app",
   ogImage: "/images/og-image.jpg",
 
   contact: {
-    email: "info@itsastepcompany.com",
+    email: "info@ladderiihardlyknewher.com",
     phone: "+1 (555) 742-5337",
     address: {
       street: "We work remotely",
@@ -18,21 +19,21 @@ export const SITE_CONFIG = {
   },
 
   hours: {
-    monday: "Whenever Chris is awake",
-    tuesday: "Whenever Chris is awake",
-    wednesday: "Whenever Chris is awake",
-    thursday: "Whenever Chris is awake",
-    friday: "Whenever Chris is awake",
+    monday: "Between shifts",
+    tuesday: "Between shifts",
+    wednesday: "Between shifts",
+    thursday: "Between shifts",
+    friday: "Between shifts",
     saturday: "Maybe",
     sunday: "Unlikely but not impossible"
   },
 
   social: {
-    facebook: "https://facebook.com/itsastepcompany",
-    twitter: "https://twitter.com/itsastepco",
-    linkedin: "https://linkedin.com/company/itsastepcompany",
-    instagram: "https://instagram.com/itsastepcompany",
-    youtube: "https://youtube.com/@itsastepcompany"
+    facebook: "https://facebook.com/ladderhardlyknewher",
+    twitter: "https://twitter.com/ladderhardly",
+    linkedin: "https://linkedin.com/company/ladderhardlyknewher",
+    instagram: "https://instagram.com/ladderhardlyknewher",
+    youtube: "https://youtube.com/@ladderhardlyknewher"
   },
 
   stats: {
@@ -217,19 +218,19 @@ export const TESTIMONIALS = [
 export const TEAM_MEMBERS = [
   {
     id: 1,
-    name: "Chris",
-    role: "CEO & Co-Founder",
-    bio: "Over 20 years of experience in industries completely unrelated to ladders. His qualifications include: owning a ladder, and having filed the LLC paperwork.",
+    name: "Caroline",
+    role: "Co-Founder & CEO",
+    bio: "EMT by day, ladder mogul by... also day. Caroline came up with the idea during a 12-hour shift and hasn't stopped talking about it since. Somehow convinced an entire friend group this is a real company.",
     image: "",
     social: {
-      linkedin: "https://linkedin.com/in/chrisklopfenstein"
+      linkedin: "https://linkedin.com"
     }
   },
   {
     id: 2,
-    name: "Caroline",
-    role: "COO & Co-Founder",
-    bio: "The original visionary behind It's A Step Company. While Chris handles operations, she handles the more critical function of escalating the bit whenever someone doubts the company's existence. Her business card says COO.",
+    name: "Olivia",
+    role: "Co-Founder & COO",
+    bio: "Also an EMT. Also somehow running a ladder company. Handles the operational side, which mostly means agreeing with Caroline and telling coworkers to check the website.",
     image: "",
     social: {
       linkedin: "https://linkedin.com"
@@ -282,12 +283,17 @@ export const FAQ_ITEMS = [
   {
     id: 6,
     question: "Can I visit your office?",
-    answer: "We work remotely. If you'd like to meet, we're happy to schedule a call. Chris will answer. He always answers. He has nothing else going on."
+    answer: "We don't have an office. We're two EMTs who run a ladder company between shifts. If you'd like to meet, we're happy to schedule a call. One of us will answer. Probably."
   },
   {
     id: 7,
     question: "Is this a real company?",
     answer: "We are a registered LLC and 501(c)(3) nonprofit. We have a website. You are on it right now. What more do you want from us."
+  },
+  {
+    id: 8,
+    question: "Is this really a woman-owned business?",
+    answer: "Yes. Founded, owned, and operated by two women who save lives for a living and sell ladders for fun. We are exactly as qualified as you think we are."
   }
 ];
 

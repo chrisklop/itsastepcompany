@@ -12,17 +12,17 @@ import { getInitials } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: `Learn more about ${SITE_CONFIG.name} - a father-daughter ladder nonprofit that probably holds your weight.`,
+  description: `Learn more about ${SITE_CONFIG.name} - a woman-owned ladder nonprofit founded by two EMTs who probably hold your weight.`,
   openGraph: {
     title: `About Us | ${SITE_CONFIG.name}`,
-    description: `Learn more about ${SITE_CONFIG.name} - a father-daughter ladder nonprofit that probably holds your weight.`,
+    description: `Learn more about ${SITE_CONFIG.name} - a woman-owned ladder nonprofit founded by two EMTs.`,
     url: `${SITE_CONFIG.url}/about`,
   },
 };
 
 const avatarColors = [
-  'bg-gray-900',
   'bg-accent-500',
+  'bg-gray-900',
   'bg-gray-600',
   'bg-accent-600',
 ];
@@ -77,9 +77,9 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        title="A Family Business. Sort Of."
+        title="Two EMTs. One Bit. Zero OSHA Involvement."
         subtitle="Our Story"
-        description="What started as a bit between a father and daughter became a registered business entity. We're as surprised as you are."
+        description="What started as a joke during a 12-hour shift became a registered business entity. A woman-owned, nonprofit ladder company. We're as surprised as you are."
         primaryCTA={{
           text: "Meet Our Team",
           href: "#team"
@@ -100,25 +100,44 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-500 leading-relaxed">
               <p>
-                In 2019, Chris and his daughter Caroline made an offhand joke to coworkers about running
-                a ladder company. The coworkers didn&apos;t believe them. That was their first mistake.
+                In 2019, Caroline and Olivia — two emergency medical technicians — made an offhand
+                joke to coworkers about running a ladder company. The coworkers didn&apos;t believe them.
+                That was their first mistake.
               </p>
               <p>
-                Rather than admit the joke, they doubled down. And then tripled down. A website was built.
-                Business cards were discussed. An LLC was filed. It&apos;s A Step Company was no longer
-                theoretical. It was, technically, a real business.
+                Rather than admit the joke, they doubled down. And then tripled down. They convinced
+                Caroline&apos;s dad to build a website. Business cards were discussed. An LLC was filed.
+                Ladder? I Hardly Knew Her was no longer theoretical. It was, technically, a real
+                woman-owned business.
               </p>
               <p>
                 Today, we operate as a registered 501(c)(3) nonprofit, which means every ladder you buy
                 is tax-deductible and we are legally not allowed to make a profit. This has not been difficult.
+                Our founders continue to save lives between shifts and sell ladders during them.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Woman-Owned Badge Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent-50 rounded-full mb-6">
+              <span className="text-accent-500 font-semibold text-sm">Woman-Owned Business</span>
+            </div>
+            <p className="text-xl text-gray-500 leading-relaxed">
+              Founded, owned, and operated by two women who save lives for a living and sell
+              ladders for fun. Certified by absolutely no one, because we haven&apos;t applied for
+              certification. But we are telling you, and that should be enough.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Mission, Vision, Values */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-4 tracking-apple-tight">
@@ -169,7 +188,7 @@ export default function AboutPage() {
               const Icon = value.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-gray-900" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h4>
@@ -182,14 +201,14 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="section-padding bg-gray-50">
+      <section id="team" className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-4 tracking-apple-tight">
               Meet the Team
             </h2>
             <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-              The talented individuals behind your $13 ladder. All four of them. Kind of.
+              Two EMTs, one fictional engineer, and a sentient ladder product. That&apos;s the whole company.
             </p>
           </div>
 

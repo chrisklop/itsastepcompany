@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   shortName: "LIHKH",
   description: "Handcrafted vertical mobility solutions for the modern climber. Starting at $13.",
   tagline: "Elevating Expectations. Literally.",
-  url: "https://ladderiihardlyknewher.vercel.app",
+  url: "https://lihkh.vercel.app",
   ogImage: "/images/og-image.jpg",
 
   contact: {

@@ -116,13 +116,13 @@ const Services: React.FC<ServicesProps> = ({
                         </div>
                       )}
 
-                      <Link
-                        href="/build"
+                      <a
+                        href="tel:+12066357392"
                         className="inline-flex items-center text-sm font-medium text-gray-900 hover:text-accent-500 transition-colors duration-200"
                       >
-                        Configure This Ladder
+                        Call to Order
                         <ArrowRight className="ml-1 w-4 h-4" />
-                      </Link>
+                      </a>
                     </div>
                   </Card>
                 ) : (
@@ -151,13 +151,13 @@ const Services: React.FC<ServicesProps> = ({
                         </div>
                       )}
 
-                      <Link
-                        href="/build"
+                      <a
+                        href="tel:+12066357392"
                         className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-black transition-colors duration-200"
                       >
-                        Configure This Ladder
+                        Call to Order
                         <ArrowRight className="w-4 h-4" />
-                      </Link>
+                      </a>
                     </div>
                   </Card>
                 )}

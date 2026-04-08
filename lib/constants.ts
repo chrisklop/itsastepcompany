@@ -51,10 +51,10 @@ export const NAVIGATION_ITEMS = [
     href: "/products",
     dropdown: true,
     items: [
-      { name: "Standard Collection", href: "/products#standard" },
-      { name: "Premium Collection", href: "/products#premium" },
+      { name: "All Products", href: "/products" },
       { name: "The Flex Seal Ladder", href: "/flex-seal" },
-      { name: "Accessibility Line", href: "/products#accessibility" },
+      { name: "Build Your Own", href: "/build" },
+      { name: "Call Us to Order", href: "tel:+12066357392" },
     ]
   },
   { name: "Build Your Ladder", href: "/build", dropdown: false },
@@ -240,7 +240,7 @@ export const TEAM_MEMBERS = [
     id: 3,
     name: "Gary",
     role: "Head of Engineering",
-    bio: "Gary doesn't exist. But if he did, he'd have 30 years of structural engineering experience and strong opinions about rung spacing. We reference Gary in meetings to sound more credible.",
+    bio: "Gary doesn't exist. But he does answer the phone. Call us and you'll meet him. He has 30 years of structural engineering experience, strong opinions about rung spacing, and he will talk to you about ladders for as long as you let him. We've tried to stop him. We can't.",
     image: "",
     social: {}
   },

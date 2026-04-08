@@ -39,12 +39,67 @@ const COLORS = [
   { id: '#FF0000', name: 'Fire Engine' },
 ];
 
-function getHeightWarning(height: number): string | null {
-  if (height >= 200) return "Maximum height reached. We respect your ambition and fear your judgment.";
-  if (height >= 150) return "At this height, we are legally required to inform you that wind exists.";
-  if (height >= 100) return "You will need a permit. We will not help you get one.";
-  if (height >= 40) return "Our engineers would like you to reconsider.";
-  return null;
+function getHeightWarning(height: number, material: string): string | null {
+  switch (material) {
+    case 'glass':
+      if (height >= 200) return "Maximum height. This is the tallest glass ladder in recorded human history. We checked. No one else was tracking this.";
+      if (height >= 150) return "At this height, a glass ladder is classified as performance art in 11 states.";
+      if (height >= 100) return "100 feet of glass. The view from the top will be incredible. Briefly.";
+      if (height >= 40) return "Our engineers have formally asked us to stop offering glass ladders above 10 feet. We said no.";
+      if (height >= 20) return "At this height, a glass ladder technically qualifies as abstract sculpture. Very functional sculpture.";
+      return null;
+
+    case 'styrofoam':
+      if (height >= 200) return "Maximum height. 200 feet of styrofoam. This is either genius or a cry for help. We will not ask which.";
+      if (height >= 150) return "This ladder could be relocated by a moderate breeze. That is not covered under warranty.";
+      if (height >= 100) return "Your ladder weighs approximately 12 pounds. The weight capacity does not reflect this.";
+      if (height >= 40) return "Our engineers have submitted their resignations. We have not accepted them.";
+      if (height >= 20) return "Styrofoam does not appreciate wind. We are simply informing you.";
+      return null;
+
+    case 'flexseal':
+      if (height >= 200) return "Maximum height. Phil Swift would weep at this. Whether from pride or horror, we cannot say. He has still not been contacted.";
+      if (height >= 150) return "Legal has asked us to clarify that 'as seen on TV' does not apply above 150 feet. Flex Seal has not acknowledged this ladder exists.";
+      if (height >= 100) return "At this height, this ladder required approximately 4,000 linear feet of Flex Seal Tape. We have our sources. Don't ask.";
+      if (height >= 40) return "Phil Swift has still not been contacted. This ladder is 40 feet of pure, unendorsed belief.";
+      if (height >= 20) return "Flex Seal Ladder note: Phil Swift is unaware of this product. We have chosen to keep it that way.";
+      return null;
+
+    case 'wood':
+      if (height >= 200) return "Maximum height. This ladder is now taller than most of the trees it came from. Poetic, in a way.";
+      if (height >= 150) return "150 feet of wood requires a permit, a prayer, and possibly a forestry license. We will help with none of these.";
+      if (height >= 100) return "At this height, wood expands and contracts with the weather. Your ladder has feelings about humidity.";
+      if (height >= 40) return "Our engineers would like you to reconsider. That is a significant amount of wood.";
+      return null;
+
+    case 'aluminum':
+      if (height >= 200) return "Maximum height reached. We respect your ambition and your apparent immunity to physics.";
+      if (height >= 150) return "At this height, wind load calculations become relevant. We have not done them. You probably should.";
+      if (height >= 100) return "This much aluminum requires a building permit. It will also conduct lightning. Both things are true simultaneously.";
+      if (height >= 40) return "Our engineers would like you to reconsider. They are being polite about it.";
+      return null;
+
+    case 'fiberglass':
+      if (height >= 200) return "Maximum height. 200 feet of fiberglass. The safest possible terrible idea. We are proud of you.";
+      if (height >= 150) return "Your electrician's association would be proud. We still cannot help with the permit.";
+      if (height >= 100) return "100 feet of fiberglass. You are statistically the most responsible person to use this configurator.";
+      if (height >= 40) return "Fiberglass at this height is actually sensible. We are deeply suspicious of you.";
+      return null;
+
+    case 'pvc':
+      if (height >= 200) return "Maximum height. 200 feet of PVC. Home Depot didn't have enough. We found another source. Don't ask.";
+      if (height >= 150) return "We called our PVC supplier about this order. They asked us not to use their name.";
+      if (height >= 100) return "At this height, PVC flexes in direct sunlight. Your ladder will have opinions about the temperature.";
+      if (height >= 40) return "Plumbers don't typically go this high. You are a pioneer. A reckless, pipe-shaped pioneer.";
+      return null;
+
+    default:
+      if (height >= 200) return "Maximum height reached. We respect your ambition and fear your judgment.";
+      if (height >= 150) return "At this height, we are legally required to inform you that wind exists.";
+      if (height >= 100) return "You will need a permit. We will not help you get one.";
+      if (height >= 40) return "Our engineers would like you to reconsider.";
+      return null;
+  }
 }
 
 function getSavings(height: number): string {
@@ -78,7 +133,7 @@ export default function LadderConfigurator() {
     }
   };
 
-  const heightWarning = getHeightWarning(config.height);
+  const heightWarning = getHeightWarning(config.height, config.material);
   const savings = getSavings(config.height);
 
   const materialName = MATERIALS.find(m => m.id === config.material)?.name || '';

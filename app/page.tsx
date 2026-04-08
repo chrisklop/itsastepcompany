@@ -109,6 +109,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Call to Order Banner */}
+      <section className="py-16 bg-gray-900">
+        <div className="container-custom text-center">
+          <p className="text-accent-500 text-sm font-medium tracking-widest uppercase mb-4">
+            Ready to Order?
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-apple-tight">
+            Call Gary.
+          </h2>
+          <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+            Our Head of Engineering answers every call personally.
+            He loves talking about ladders. He will not stop. You&apos;ve been warned.
+          </p>
+          <a
+            href="tel:+12066357392"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-accent-500 text-white text-2xl font-bold rounded-full hover:bg-accent-600 transition-colors duration-200"
+          >
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            (206) 635-7392
+          </a>
+          <p className="text-gray-500 text-xs mt-4">Hours: Between shifts. Gary is always available. Gary never sleeps.</p>
+        </div>
+      </section>
+
       {/* Products Section */}
       <Services
         title="The Collection"
@@ -141,12 +165,12 @@ export default function HomePage() {
         subtitle="Your Journey Starts Here"
         description="Join over 14,000 customers who chose vertical freedom. Your first consultation is free. Your first ladder is $13. Your first climb is on you."
         primaryCTA={{
-          text: "Build Your Ladder",
-          href: "/build"
+          text: "Call (206) 635-7392",
+          href: "tel:+12066357392"
         }}
         secondaryCTA={{
-          text: "Schedule a Consultation",
-          href: "/contact"
+          text: "Build Your Ladder Online",
+          href: "/build"
         }}
         variant="gradient"
       />

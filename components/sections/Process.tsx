@@ -80,7 +80,7 @@ const Process: React.FC<ProcessProps> = ({
               viewport={{ once: true }}
             >
               {/* Timeline Line */}
-              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-200 transform md:-translate-x-0.5"></div>
+              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform md:-translate-x-0.5"></div>
 
               {steps.map((step, index) => {
                 const Icon = getIcon(step.icon);
@@ -95,17 +95,17 @@ const Process: React.FC<ProcessProps> = ({
                     variants={itemVariants}
                   >
                     {/* Timeline Dot */}
-                    <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow-lg transform md:-translate-x-2 z-10"></div>
+                    <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-gray-900 rounded-full border-4 border-white shadow-lg transform md:-translate-x-2 z-10"></div>
 
                     {/* Content */}
                     <div className={`w-full md:w-5/12 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
                       <div className="bg-white p-6 rounded-lg shadow-md ml-12 md:ml-0">
                         <div className="flex items-center mb-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mr-4">
-                            <Icon className="w-6 h-6 text-white" />
+                          <div className="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mr-4">
+                            <Icon className="w-6 h-6 text-gray-900" />
                           </div>
                           <div>
-                            <span className="text-sm font-medium text-primary-600">Step {step.id}</span>
+                            <span className="text-sm font-medium text-accent-500">Step {step.id}</span>
                             <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
                           </div>
                         </div>
@@ -159,10 +159,10 @@ const Process: React.FC<ProcessProps> = ({
                   className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
                   variants={itemVariants}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-8 h-8 text-gray-900" />
                   </div>
-                  <span className="text-sm font-medium text-primary-600 block mb-2">Step {step.id}</span>
+                  <span className="text-sm font-medium text-accent-500 block mb-2">Step {step.id}</span>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{step.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
                 </motion.div>
@@ -213,13 +213,13 @@ const Process: React.FC<ProcessProps> = ({
                   variants={itemVariants}
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                    <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl font-bold">
                       {step.id}
                     </div>
                   </div>
                   <div className="flex-grow">
                     <div className="flex items-center mb-3">
-                      <Icon className="w-6 h-6 text-primary-500 mr-3" />
+                      <Icon className="w-6 h-6 text-gray-900 mr-3" />
                       <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
                     </div>
                     <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>

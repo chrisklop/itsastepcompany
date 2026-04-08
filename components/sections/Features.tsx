@@ -93,8 +93,8 @@ const Features: React.FC<FeaturesProps> = ({
               <motion.div key={feature.id} variants={itemVariants}>
                 {variant === 'minimal' ? (
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-primary-600" />
+                    <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-gray-900" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {feature.title}
@@ -105,8 +105,8 @@ const Features: React.FC<FeaturesProps> = ({
                   </div>
                 ) : (
                   <Card hover padding="lg" className="h-full text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-gray-900" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">
                       {feature.title}
@@ -130,16 +130,16 @@ const Features: React.FC<FeaturesProps> = ({
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <p className="text-lg text-gray-600 mb-8">
-              Ready to experience the difference? Let's work together.
+            <p className="text-lg text-gray-500 mb-8">
+              Ready to experience vertical freedom? Build your ladder today.
             </p>
             <motion.a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-colors duration-200"
+              href="/build"
+              className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-medium rounded-full hover:bg-black transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get Started Today
+              Build Your Ladder
               <Icons.ArrowRight className="ml-2 w-5 h-5" />
             </motion.a>
           </motion.div>

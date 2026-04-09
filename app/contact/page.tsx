@@ -208,7 +208,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm">Real Humans</h4>
-                    <p className="text-sm text-gray-500">When you call, a real person answers. It&apos;s Karaline. Or Olyvia. There is no phone tree. There is no hold music. There is just two EMTs and a dream.</p>
+                    <p className="text-sm text-gray-500">Tiffany answers. Every time. Tiffany is completely real and we resent the implication otherwise. She has 30 years of structural engineering experience and strong opinions about rung spacing, and if you&apos;re lucky, she will share all of them. You are very lucky.</p>
                   </div>
                 </div>
               </div>

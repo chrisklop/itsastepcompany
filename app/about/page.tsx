@@ -118,13 +118,13 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-500 leading-relaxed">
               <p>
-                In 2019, Karaline and Olyvia — two emergency medical technicians — made an offhand
+                In 2025, Karaline and Olyvia — two emergency medical technicians — made an offhand
                 joke to coworkers about running a ladder company. The coworkers didn&apos;t believe them.
                 That was their first mistake.
               </p>
               <p>
                 Rather than admit the joke, they doubled down. And then tripled down. They convinced
-                Karaline&apos;s dad to build a website. Business cards were discussed. An LLC was filed.
+                Olyvia&apos;s dad to build a website. Business cards were discussed. An LLC was filed.
                 Ladder? I Hardly Knew Her was no longer theoretical. It was, technically, a real
                 woman-owned business.
               </p>
@@ -247,7 +247,7 @@ export default function AboutPage() {
                       <span className="text-[9px] text-gray-300 mt-1">Photo TBD</span>
                     </div>
                   ) : (
-                    /* Initial avatars for Gary & Flex Seal Ladder */
+                    /* Initial avatars for Tiffany & Flex Seal Ladder */
                     <div className={`w-full h-full ${avatarColors[index % avatarColors.length]} rounded-full flex items-center justify-center`}>
                       <span className="text-white font-bold text-xl">
                         {getInitials(member.name)}

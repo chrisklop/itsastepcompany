@@ -238,9 +238,9 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 3,
-    name: "Gary",
+    name: "Tiffany",
     role: "Head of Engineering",
-    bio: "Gary doesn't exist. But he does answer the phone. Call us and you'll meet him. He has 30 years of structural engineering experience, strong opinions about rung spacing, and he will talk to you about ladders for as long as you let him. We've tried to stop him. We can't.",
+    bio: "Tiffany doesn't exist. But she does answer the phone. Call us and you'll meet her. She has 30 years of structural engineering experience, strong opinions about rung spacing, and she will talk to you about ladders for as long as you let her. We've tried to stop her. We can't.",
     image: "",
     social: {}
   },
